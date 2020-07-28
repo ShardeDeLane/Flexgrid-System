@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AUTO GRID</title>
+</head>
+<style>
+/*
+add any number of auto sizing columns to a 
+row let the grid figure it out 
+*/
+
+html {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* container with padding on sides for spacing */
+.wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.container-fluid {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+/* section */
+.section {
+	padding-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+/* row */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -.5rem;
+	margin-right: -.5rem;
+}
+
+.col {
+	flex: 1;
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+
+.col-20 {
+	flex: 2;
+}
+
+.col-55 {
+	flex: 5.5;
+}
+
+.col-25 {
+	flex: 2.5;
+}
+
+.box-row {
+	min-height: 1rem;
+	background: #000;
+	margin-bottom: 1rem;
+}
+
+</style>
+<body>
+	<div class="wrap container-fluid">
+		<section class="section">
+			<h1>Auto Grid Test</h1>
+
+			<!-- row -->
+			<div class="row">
+				<!-- 100% -->
+				<div class="col">
+					<div class="box-row"></div>
+				</div>
+			</div>
+
+			<!-- row -->
+			<div class="row">
+				<!-- 50% -->
+				<div class="col">
+					<div class="box-row"></div>
+				</div>
+				<!-- 50% -->
+				<div class="col">
+					<div class="box-row"></div>
+				</div>
+			</div>
+
+			<!-- row -->
+			<div class="row">
+				<!-- 33% -->
+				<div class="col">
+					<div class="box-row"></div>
+				</div>
+				<!-- 33% -->
+				<div class="col">
+					<div class="box-row"></div>
+				</div>
+				<!-- 33% -->
+				<div class="col">
+					<div class="box-row"></div>
+				</div>
+			</div>
+
+			<!-- row -->
+			<div class="row">
+				<!-- 20% -->
+				<div class="col col-20">
+					<div class="box-row"></div>
+				</div>
+				<!-- 55% -->
+				<div class="col col-55">
+					<div class="box-row"></div>
+				</div>
+				<!-- 25% -->
+				<div class="col col-25">
+					<div class="box-row"></div>
+				</div>
+			</div>
+
+		</section>
+	</div>
+</body>
+</html>
